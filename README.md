@@ -63,7 +63,7 @@ Minilab for Autonomous Vehicles Simulation in Matlab:
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-<div class="tenor-gif-embed" data-postid="14176897" data-share-method="host" data-aspect-ratio="1.51095" data-width="50%">from <a href="https://tenor.com/search/car-gifs">Car GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![](https://media.tenor.com/J9cgEXjkIKYAAAAC/girl-car.gif)
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
