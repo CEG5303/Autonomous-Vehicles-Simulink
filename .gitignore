@@ -1,2 +1,53 @@
-# Matlab generated files
+# Ignore compiled MATLAB files
+**/*.mexa64
+**/*.mexw64
+**/*.mexmaci64
+**/*.mexglx
+
+# Ignore Simulink model files and temporary files
+**/*.slx
+**/*.mdl
+**/*.sfproj
+**/*.slprj
+**/*.sldd
+
+# Ignore code generation files and folders
+codegen
+slprj
+rtw
+
+# Ignore Simulink cache and temporary files
+slprj/_sfprj
+slprj/_sfprj/mex
+slprj/sim
+slprj/stubs
+slprj/ert
+slprj/ert/mex
+slprj/ert/_sharedutils
+slprj/ert/_sharedutils/mex
+slprj/ert/_sharedutils/ert
+slprj/ert/_sharedutils/ert/mex
+**/*.slxc
+**/*.slxc.*
+**/*.sltx
+**/*.sltx.*
+**/*.sfun
+**/*.sfuns
+**/*.cgt
+**/*.cgx
+**/*.rtw
+**/*.grt
+**/*.tlc
+
+# Ignore MATLAB preferences and cache files
+matlab.prf
 **/*.asv
+**/*.asv.*
+history.m
+history.xml
+**/*.bak
+**/*.tmp
+
+# Ignore Simulink report files
+**/*.xml
+**/*.html
