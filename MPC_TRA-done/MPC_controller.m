@@ -31,13 +31,15 @@ function y  =  MPC_controller(x)
     end
     
     N = max(round(tf/dt),round(T_lane_keep/dt)); % predictive horizon points
-    xx = zeros(Nx,1);
+    xx = zeros(Nx,2);
     xx(1,1) = Y; xx(2,1) = fy; xx(3,1) = vy; xx(4,1) =  wr;
+    xx(1,2) = Y; xx(2,2) = fy; xx(3,2) = vy; xx(4,2) =  wr;
     %-----------------------------------------simulation start
-    u = ones(N,1)*0;                 % control variable--delta_f
+    u = ones(N,2)*0;                 % control variable--delta_f
     options = optimset('Algorithm','interior-point','TolFun',1e-4,'LargeScale','on','MaxFunEvals',1e10, 'MaxIter',1e10);
     [uu,fval,exitflag] = fmincon(@myobj1,u,[],[],[],[],[],[],@mycon1,options);
     y(1) = uu(1); % use the first variable in the control horizon
+    y(2) = uu(2); % use the first variable in the control horizon
 end
 
 
@@ -46,10 +48,13 @@ end
 function [c,ceq] = mycon1(u)
     global N 
     u_lim = 0.2;
-    c = ones(2*N,1); % for inequality constraints
+    c = ones(2*N,2); % for inequality constraints
     for k = 1:N
-        c(k) = u(k) - u_lim;
-        c(k+N) = -u(k) - u_lim;
+        c(k,1) = u(k,1) - u_lim;
+        c(k+N,1) = -u(k,1) - u_lim;
+
+        c(k,2) = u(k,2) - u_lim;
+        c(k+N,2) = -u(k,2) - u_lim;
     end
     ceq = zeros(4,1); % for equality constraints
 end
