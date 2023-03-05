@@ -6,7 +6,7 @@
 
 # Ignore Simulink model files and temporary files
 **/*.slx
-**/*.mdl
+**/*.mdl.autosave
 **/*.sfproj
 **/*.slprj
 **/*.sldd
