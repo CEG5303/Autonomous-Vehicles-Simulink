@@ -78,6 +78,10 @@ Install the apps in the list of Dependencies(#dependencies)
 Run the simulink and check the result with scope modules. Remember to show the legends.
 
 
+### Work with this git project
+
+For synchronizing the work among team, you can clone this project to your workspace, create a new branch with your name and work on it. Eventually, after you push your branch to the repo, you can create a merge request and merge it the main branch.
+
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@johnnguyen](https://github.com/embed-coder)
