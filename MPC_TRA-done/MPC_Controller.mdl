@@ -18,6 +18,7 @@ __MWOPC_PART_BEGIN__ /[Content_Types].xml
   <Override ContentType="application/vnd.mathworks.simulink.configSetInfo+xml" PartName="/simulink/configSetInfo.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.graphicalInterface+xml" PartName="/simulink/graphicalInterface.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.mf0+xml" PartName="/simulink/modelDictionary.xml"/>
+  <Override ContentType="application/vnd.mathworks.simulink.pluginParameters+xml" PartName="/simulink/plugins/LogicAnalyzerPlugin.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.ScheduleCore+xml" PartName="/simulink/ScheduleCore.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.ScheduleEditor+xml" PartName="/simulink/ScheduleEditor.xml"/>
   <Override ContentType="application/vnd.mathworks.stateflow.machine+xml" PartName="/simulink/stateflow/machine.xml"/>
@@ -44,8 +45,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2002-11-25T14:24:29Z</dcterms:created>
   <dc:creator>ywata</dc:creator>
   <cp:lastModifiedBy>john.nguyen</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-03-05T15:17:28Z</dcterms:modified>
-  <cp:revision>6.2</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-03-05T16:23:27Z</dcterms:modified>
+  <cp:revision>6.3</cp:revision>
   <cp:version>R2022b</cp:version>
 </cp:coreProperties>
 
@@ -79,6 +80,7 @@ __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="CanvasColor_142" Target="bdmxdata/CanvasColor_142.mxarray" Type="http://schemas.mathworks.com/simulinkModel/2015/relationships/modelMxArray"/>
   <Relationship Id="FrameSettings_142" Target="bdmxdata/FrameSettings_142.mxarray" Type="http://schemas.mathworks.com/simulinkModel/2015/relationships/modelMxArray"/>
+  <Relationship Id="LogicAnalyzerPlugin" Target="plugins/LogicAnalyzerPlugin.xml" Type="http://schemas.mathworks.com/simulinkModel/2014/relationships/pluginParameters"/>
   <Relationship Id="NumPorts_142" Target="bdmxdata/NumPorts_142.mxarray" Type="http://schemas.mathworks.com/simulinkModel/2015/relationships/modelMxArray"/>
   <Relationship Id="ScheduleCore" Target="ScheduleCore.xml" Type="http://schemas.mathworks.com/simulink/2013/relationships/ScheduleCore"/>
   <Relationship Id="ScheduleEditor" Target="ScheduleEditor.xml" Type="http://schemas.mathworks.com/simulink/2013/relationships/ScheduleEditor"/>
@@ -158,7 +160,7 @@ Kt=0.2</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:6.2&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:6.3&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -178,7 +180,7 @@ Kt=0.2</P>
         </Array>
       </Object>
       <Object PropName="InstrumentedSignals" ObjectID="2" ClassName="Simulink.HMI.InstrumentedSignals">
-        <Array PropName="Persistence" Type="Struct" Dimension="1*1">
+        <Array PropName="Persistence" Type="Struct" Dimension="5*1">
           <MATStruct>
             <Field Name="UUID" Class="char">3350ad9c-8d6f-4e44-8217-cc66cfb6540d</Field>
             <Field Name="BlockPath_" Class="char">Interpreted MATLAB Function</Field>
@@ -187,6 +189,86 @@ Kt=0.2</P>
             <Field Name="OutputPortIndex_" Class="double">1.0</Field>
             <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
             <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">390a4e48-8b9c-460f-8b39-f4a819bdf1ff</Field>
+            <Field Name="BlockPath_" Class="char">Demux1</Field>
+            <Field Name="SID_" Class="char">3</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char">Vy</Field>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">079b84c0-223e-4794-8a62-e7d90afe5593</Field>
+            <Field Name="BlockPath_" Class="char">Demux1</Field>
+            <Field Name="SID_" Class="char">3</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">3.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char">Yaw</Field>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">f2f483d1-e808-4cd2-9cd4-84c429175644</Field>
+            <Field Name="BlockPath_" Class="char">Demux1</Field>
+            <Field Name="SID_" Class="char">3</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">2.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char">Vx</Field>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">1f6134f4-ae03-4958-8269-224f551f9d9d</Field>
+            <Field Name="BlockPath_" Class="char">Demux1</Field>
+            <Field Name="SID_" Class="char">3</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">4.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char">Yaw_Rate</Field>
             <Field Name="SubSysPath_" Class="char"/>
             <Field Name="Decimation_" Class="double">1.0</Field>
             <Field Name="MaxPoints_" Class="double">1024.0</Field>
@@ -1033,7 +1115,38 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
   <P Name="NumRootOutports">0</P>
   <P Name="ParameterArgumentNames"/>
   <P Name="NumModelReferences">0</P>
-  <P Name="NumTestPointedSignals">1</P>
+  <P Name="NumTestPointedSignals">5</P>
+  <TestPointedSignal>
+    <P Name="SignalName">Vy</P>
+    <P Name="FullBlockPath">$bdroot/Demux1</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">Vx</P>
+    <P Name="FullBlockPath">$bdroot/Demux1</P>
+    <P Name="PortIndex">2</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">Yaw</P>
+    <P Name="FullBlockPath">$bdroot/Demux1</P>
+    <P Name="PortIndex">3</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">Yaw_Rate</P>
+    <P Name="FullBlockPath">$bdroot/Demux1</P>
+    <P Name="PortIndex">4</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
   <TestPointedSignal>
     <P Name="SignalName"/>
     <P Name="FullBlockPath">$bdroot/Interpreted MATLAB Function</P>
@@ -1055,7 +1168,7 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
   <P Name="NumExternalFileReferences">1</P>
   <ExternalFileReference>
     <P Name="Reference">autolibshared/Vehicle Body 3DOF Single Track</P>
-    <P Name="Path">$bdroot/Vehicle Dynamics/Vehicle Body 3DOF Single Track</P>
+    <P Name="Path">$bdroot/Vehicle Dynamics/Vehicle Body 3DOF Dual Track</P>
     <P Name="SID">611</P>
     <P Name="Type">LIBRARY_BLOCK</P>
   </ExternalFileReference>
@@ -1069,30 +1182,36 @@ __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
     <Interface type="Interface" uuid="c775478a-0649-4c9e-bce3-e34f3ad9a852"/>
   </System>
 </MF0>
+__MWOPC_PART_BEGIN__ /simulink/plugins/LogicAnalyzerPlugin.xml
+<?xml version="1.0" encoding="utf-8"?>
+<LogicAnalyzerPlugin>
+  <P Name="LogicAnalyzerSignalOrdering">3350ad9c-8d6f-4e44-8217-cc66cfb6540d,390a4e48-8b9c-460f-8b39-f4a819bdf1ff,f2f483d1-e808-4cd2-9cd4-84c429175644,079b84c0-223e-4794-8a62-e7d90afe5593,1f6134f4-ae03-4958-8269-224f551f9d9d</P>
+</LogicAnalyzerPlugin>
+
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2022b_202203181029">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="4c215f28-739c-4e5f-aa59-fa99ee0dc3e7">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="fb1718ea-4802-4848-a70e-0065d5ac7313">
     <priorityDirection>HighNumberLast</priorityDirection>
     <editorState type="sltp.mm.core.EditorState" uuid="46f127f8-24a8-4ce7-ab81-8e3b7da518c7">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="760d6823-3659-4e57-90ac-d4bd7cbc7ca3"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="4242e1de-b45c-4ec2-ab73-99ba97849db9">
-      <context type="sltp.mm.core.Context" uuid="4c215f28-739c-4e5f-aa59-fa99ee0dc3e7"/>
+    <rootTask type="sltp.mm.core.Task" uuid="311bfcfd-79e1-49c8-9d33-67c22f30bf73">
+      <context type="sltp.mm.core.Context" uuid="fb1718ea-4802-4848-a70e-0065d5ac7313"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="8e407aa4-520a-43c9-809d-565bde0709c3">
-        <tasks type="sltp.mm.core.Task" uuid="2fcd3cb8-ba5f-46c9-8055-8bef4ea49615">
+      <subgraph type="sltp.mm.core.Graph" uuid="b98f6c6b-c2db-44c8-b43f-016059ac56fd">
+        <tasks type="sltp.mm.core.Task" uuid="900a9077-07f9-45af-93ae-8897acaeaedb">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="4c215f28-739c-4e5f-aa59-fa99ee0dc3e7"/>
+          <context type="sltp.mm.core.Context" uuid="fb1718ea-4802-4848-a70e-0065d5ac7313"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="c2e7b1f4-0c88-4664-90a3-dc72dce1bb80">
+          <rates type="sltp.mm.core.Rate" uuid="a3b822f6-83bd-4266-a00c-dff6509520b2">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -1102,7 +1221,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="12134f6b-7cfc-4e19-8a0a-0b920f47fc4c">
+          <rates type="sltp.mm.core.Rate" uuid="d32abf2a-0d7f-44cb-9dc7-61177cc245d7">
             <annotation>D1</annotation>
             <color>-436207361</color>
             <hasBlocks>true</hasBlocks>
@@ -1190,7 +1309,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_117.xml
 <System>
   <P Name="Location">[-1, -8, 1921, 1033]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">80</P>
+  <P Name="ZoomFactor">125</P>
   <Block BlockType="Inport" Name="Ego Velocity" SID="118">
     <P Name="Position">[-40, 278, -10, 292]</P>
     <P Name="ZOrder">53372</P>
@@ -1234,7 +1353,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_117.xml
     <P Name="Position">[225, 335, 245, 355]</P>
     <P Name="ZOrder">100000</P>
   </Block>
-  <Block BlockType="Reference" Name="Vehicle Body 3DOF Single Track" SID="611">
+  <Block BlockType="Reference" Name="Vehicle Body 3DOF Dual Track" SID="611">
     <PortCounts in="2" out="7"/>
     <P Name="Position">[70, 20, 180, 370]</P>
     <P Name="ZOrder">100000</P>
@@ -1474,7 +1593,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <System>
   <P Name="Location">[-1, -8, 1921, 1033]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">175</P>
+  <P Name="ZoomFactor">150</P>
   <P Name="ReportName">simulink-default.rpt</P>
   <P Name="SIDHighWatermark">647</P>
   <Block BlockType="Clock" Name="Clock" SID="2">
@@ -1588,7 +1707,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="FileSettingsInternal">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;excelSettings&quot;:{&quot;content&quot;:{},&quot;type&quot;:&quot;Streamout.ExcelSettings&quot;}},&quot;type&quot;:&quot;Streamout.FileSettingStorage&quot;,&quot;uuid&quot;:&quot;a9d2ca69-53dd-4a00-abea-6ccff4695071&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/streamout_blocks/R2020a&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
     <P Name="FrameSettings" Ref="bdmxdata:FrameSettings_142"/>
     <P Name="Layout">[1 1]</P>
-    <P Name="SignalsInternal">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;signals&quot;:[{&quot;content&quot;:{&quot;blockPath&quot;:[&quot;MPC_Controller/XY Graph&quot;],&quot;channel&quot;:[],&quot;dimensions&quot;:[1],&quot;domain&quot;:&quot;MPC_Controller/XY Graph&quot;,&quot;lineColor&quot;:&quot;#a2142f&quot;,&quot;plots&quot;:[1],&quot;port&quot;:1,&quot;sid&quot;:[],&quot;signalID&quot;:97129,&quot;signalName&quot;:&quot;Vehicle Dynamics:6&quot;},&quot;type&quot;:&quot;RecordBlkView.Signal&quot;,&quot;uuid&quot;:&quot;13ffe316-4a22-478b-8755-50ef0db67b9b&quot;},{&quot;content&quot;:{&quot;blockPath&quot;:[&quot;MPC_Controller/XY Graph&quot;],&quot;channel&quot;:[],&quot;dimensions&quot;:[1],&quot;domain&quot;:&quot;MPC_Controller/XY Graph&quot;,&quot;lineColor&quot;:&quot;#139fff&quot;,&quot;plots&quot;:[1],&quot;port&quot;:2,&quot;sid&quot;:[],&quot;signalID&quot;:97132,&quot;signalName&quot;:&quot;Vehicle Dynamics:5&quot;},&quot;type&quot;:&quot;RecordBlkView.Signal&quot;,&quot;uuid&quot;:&quot;daffb079-848c-42b7-b34a-706bdb21b40b&quot;}]},&quot;type&quot;:&quot;RecordBlkView.InputSignals&quot;,&quot;uuid&quot;:&quot;d5796aba-8dd2-4d73-aebe-ece5f43fc39c&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/streamout_blocks/R2020a&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <P Name="SignalsInternal">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;signals&quot;:[{&quot;content&quot;:{&quot;blockPath&quot;:[&quot;MPC_Controller/XY Graph&quot;],&quot;channel&quot;:[],&quot;dimensions&quot;:[1],&quot;domain&quot;:&quot;MPC_Controller/XY Graph&quot;,&quot;lineColor&quot;:&quot;#a2142f&quot;,&quot;plots&quot;:[1],&quot;port&quot;:1,&quot;sid&quot;:[&quot;&quot;],&quot;signalID&quot;:100166,&quot;signalName&quot;:&quot;X_Position&quot;},&quot;type&quot;:&quot;RecordBlkView.Signal&quot;,&quot;uuid&quot;:&quot;ef70ccf2-4eda-438c-b09b-5c15108cf58e&quot;},{&quot;content&quot;:{&quot;blockPath&quot;:[&quot;MPC_Controller/XY Graph&quot;],&quot;channel&quot;:[],&quot;dimensions&quot;:[1],&quot;domain&quot;:&quot;MPC_Controller/XY Graph&quot;,&quot;lineColor&quot;:&quot;#a2142f&quot;,&quot;plots&quot;:[1],&quot;port&quot;:2,&quot;sid&quot;:[&quot;&quot;],&quot;signalID&quot;:100170,&quot;signalName&quot;:&quot;Y_Position&quot;},&quot;type&quot;:&quot;RecordBlkView.Signal&quot;,&quot;uuid&quot;:&quot;a45fb4c1-f174-43f7-ae5a-7c9742ed815a&quot;}]},&quot;type&quot;:&quot;RecordBlkView.InputSignals&quot;,&quot;uuid&quot;:&quot;de0618c9-9c6c-41a3-a7c2-c2e3609c151a&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/streamout_blocks/R2020a&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
     <Object PropName="PlotPreferences" ObjectID="1" ClassName="Simulink.record.internal.PlotPreferences">
       <Object PropName="Time" ObjectID="2" ClassName="Simulink.record.internal.TimePlotPreferences">
         <P Name="TicksColor" Class="double">[0.0, 0.0, 0.0]</P>
@@ -1633,7 +1752,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
       </Object>
     </Object>
     <P Name="CanvasColor" Ref="bdmxdata:CanvasColor_142"/>
-    <P Name="VisualizationBindings">{&quot;xyplotplugin&quot;:{&quot;info&quot;:[{&quot;series&quot;:[{&quot;bindingParametersList&quot;:[{&quot;parameter&quot;:&quot;X-Axis&quot;,&quot;signalID&quot;:97129,&quot;signalName&quot;:&quot;Vehicle Dynamics:6&quot;},{&quot;parameter&quot;:&quot;Y-Axis&quot;,&quot;signalID&quot;:97132,&quot;signalName&quot;:&quot;Vehicle Dynamics:5&quot;}],&quot;seriesID&quot;:52598}],&quot;subplotID&quot;:1}]}}</P>
+    <P Name="VisualizationBindings">{&quot;xyplotplugin&quot;:{&quot;info&quot;:[{&quot;series&quot;:[{&quot;bindingParametersList&quot;:[{&quot;parameter&quot;:&quot;X-Axis&quot;,&quot;signalID&quot;:100166,&quot;signalName&quot;:&quot;X_Position&quot;},{&quot;parameter&quot;:&quot;Y-Axis&quot;,&quot;signalID&quot;:100170,&quot;signalName&quot;:&quot;Y_Position&quot;}],&quot;seriesID&quot;:52598}],&quot;subplotID&quot;:1}]}}</P>
     <P Name="CompatibilityTag">XY</P>
     <P Name="st">-1</P>
   </Block>
@@ -1858,24 +1977,24 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       </Object>
       <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*4">
         <Object ObjectID="5">
-          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsActive" Class="logical">1</P>
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
           <P Name="LoadSaveID" Class="char">117</P>
           <P Name="Extents" Class="double">[1882.0, 593.0]</P>
-          <P Name="ZoomFactor" Class="double">0.8</P>
-          <P Name="Offset" Class="double">[-773.30052083333271, -219.43333333333311]</P>
-          <P Name="SceneRectInView" Class="double">[-773.30052083333271, -219.43333333333311, 2352.5, 741.25]</P>
+          <P Name="ZoomFactor" Class="double">1.25</P>
+          <P Name="Offset" Class="double">[-402.533854166666, -8.083333333333087]</P>
+          <P Name="SceneRectInView" Class="double">[-402.533854166666, -8.083333333333087, 1505.6, 474.4]</P>
         </Object>
         <Object ObjectID="6">
-          <P Name="IsActive" Class="logical">1</P>
+          <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
           <P Name="Extents" Class="double">[1882.0, 593.0]</P>
-          <P Name="ZoomFactor" Class="double">1.7500000000000002</P>
-          <P Name="Offset" Class="double">[-52.347209821428805, 110.74523809523814]</P>
-          <P Name="SceneRectInView" Class="double">[-52.347209821428805, 110.74523809523814, 1075.4285714285713, 338.85714285714283]</P>
+          <P Name="ZoomFactor" Class="double">1.5</P>
+          <P Name="Offset" Class="double">[-122.14482886904818, 13.671428571428834]</P>
+          <P Name="SceneRectInView" Class="double">[-122.14482886904818, 13.671428571428834, 1254.6666666666667, 395.33333333333331]</P>
         </Object>
         <Object ObjectID="7">
           <P Name="IsActive" Class="logical">0</P>
